@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>templete</title>
+
+</head>
+<style>
+
+    td{
+        font-size: large;
+        color: khaki;
+
+    }
+    .temp-continer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+    }
+    .temp-full{
+        margin-bottom: 100px;
+        
+    }
+
+
+
+    
+
+.templete{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-content: center;
+
+}
+body {
+  background-color: #16393b;
+  padding: 20px;
+  font-family: Arial;
+}
+    
+  </style>
+
+
+<!-- full amount
+total amount from (hub)
+used flight price
+penality from (amadeus)
+service from hub (payment)
+non tax (twd/tax + non tx sheet)
+mosafeer fees
+deducted fees
+refund amount
+
+
+ -->
+
+
+
+
+
+
+
+<div class="templete temp-partial">
+<body >    
+    <h5 style="text-align: center; color: #A2416B;; font-size: 30px;" >partial Refund Cancelation</h5>    
+    <li style="text-align: center; color: #A2416B; font-size: 30px;" >
+<table style="color: rgb(2, 8, 10);" border="3"  width = "600px" height = "450px"  >
+<tr>
+<td> <br><br>  <input style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; height: 50px;" type="text" name="number" id="num_hub2" placeholder="HUB-AMOUNT"></td>
+</tr>
+<tr>
+<td><br><br> <input style="color: rgb(11, 248, 248);font-size: 20px; background-color: black; width: 600px; height: 50px;" type="text" name="number" id="used_flight2" placeholder="used-flight (fxx/r,segmant )"> </td>
+</tr>
+<tr>
+<td> <br><br> <input style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; height: 50px;" type="text" name="number" id="penality_gds2" placeholder="penality(TWD=> FXX/R,DOI=> FQN1-2*PE )"></td>
+</tr>
+<tr>
+<td> <br><br> <input style="color: rgb(11, 248, 248);background-color: black; font-size: 20px; width: 600px; height: 50px;" type="text" name="number" id="Service2" placeholder="Service from hub"></td>
+</tr>
+<tr>
+
+<td><br><br><input style="color: rgb(11, 248, 248);background-color: black;font-size: 20px; width: 600px; height: 50px;" type="text" name="number" id="tax2" placeholder="tax(TWD/TAX + NON TAX IN SHEET)"></td>
+</tr>
+<br><br><br>
+<tr>
+    
+<td><br><br><input style="color: rgb(11, 248, 248);background-color: black; width: 600px; height: 50px;font-size: 20px;" type="text" name="number" id="num_mosafer2" placeholder="mosafer fees"></td>
+
+</tr>
+
+<tr>
+    <br><br><br>
+   
+<td  style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; height: 30px;"> 
+    <br><br><br>
+    <div style="color: aqua;" name="deduct" id="deduct2" aria-placeholder="Amount deducted"> Amount deducted <br><br><br><br></div>
+
+</tr>
+
+<tr>
+    
+<td style="color: red; font-size: x-large;">
+     <h3 id="tottal2" style="text-align: center; color: aqua; font-size: 30px;">tottal</h3>
+</tr>
+
+</table>
+
+ <button   style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; border-radius: 20px; height: 70px;" id="partial_Refund">get Amount</button> 
+        </div>
+
+<script>
+
+function clulc2() {
+
+const num_hub2 = document.getElementById("num_hub2").value;  
+const used_flight2 = document.getElementById("used_flight2").value;     /// used flight 
+const penality_gds2 = document.getElementById("penality_gds2").value;       /// penality 
+const Service2 = document.getElementById("Service2").value;              ///  service 
+const tax2 = document.getElementById("tax2").value;                 ///  tax 
+const num_mosafer2 = document.getElementById("num_mosafer2").value;        /// mosafer fees 
+                                                                  //// fullamount -  (usedflight - penality - service - tax - mos )
+const deduct2 = document.getElementById("deduct2");  
+const tottal2 = document.getElementById("tottal2"); 
+  
+
+const mydeduct2  =  parseInt( penality_gds2)  + parseInt(used_flight2) + parseInt( Service2) + parseInt( num_mosafer2) + parseInt( tax2); 
+let mytottal2 = parseInt(num_hub2) - parseInt( mydeduct2); 
+if(mydeduct2 >  num_hub2){
+ tottal2.innerHTML = `tiket is not refundable  due to amount is deducted more than  tottal `   
+}else{
+deduct2.innerHTML = `
+<br>
+total amount from (hub) : ${num_hub2} 
+<br/>
+used flight price: ${used_flight2}
+<br/>
+Airline modification fee: ${penality_gds2} SAR per passenger.
+<br/>
+service from hub (payment) :  ${Service2}
+<br/>
+non tax (twd/tax + non tx sheet) : ${tax2}
+<br/>
+Almosafer company modification fee: ${num_mosafer2} SAR per passenger.  
+<br/>
+deducted fees : ${mydeduct2}
+<br/>
+Knowing that the price and possibility are not fixed."
+`;
+ tottal2.innerHTML = `Total amount:   <br><br>   ${mytottal2} SAR.
+ <br/>
+ 
+        <a href="./partialrefund.html" style="text-align: center; color: rgb(26, 247, 74); font-size: 30px;">Next</a></li>
+    <hr width="350px">
+ `;
+}
+  
+}
+
+partial_Refund.addEventListener("click" , clulc2);
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+    // <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>

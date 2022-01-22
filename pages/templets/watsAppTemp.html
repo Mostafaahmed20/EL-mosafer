@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h4{
+    color: cadetblue;
+    font-style: italic;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #F6EABE; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin-left: 100px;
+  align-items: center;
+}
+
+#myUL li a {
+  border: 1px solid #87AAAA; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #161E54;; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 20px; /* Increase the font-size */
+  color: #FF5151; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the 
+  whole list */
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+.row{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-content: center;  
+}
+p{
+  text-align: center;
+}
+.card-body{
+  margin-left: 20px;
+}
+</style>
+
+
+    </head>
+<body style="background-image: linear-gradient(rgba(255,150.0 , rgba(255,150.0 )));
+background-attachment: fixed;background-repeat: no-repeat;background-size: cover; object-fit: cover; width: 90vw; height: 90vh; opacity: .9; " >
+ 
+    <title>WatsApp_temp</title>
+
+
+<ul id="myUL">
+
+  
+<button class="accordion">Greeting AR</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-header">
+    
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+
+مرحباً عميلنا العزيز،
+<br>
+معك 000 من خدمة عملاء المسافر.
+<br>
+يسعدنا مساعدتك والرد على استفساراتك.
+<br>
+نعتذر لك عن التأخير في الرد.
+
+		<hr>
+
+    أتشرف بإسمك؟
+
+<hr>
+
+    مرحباً أستاذ 000،
+    <br>
+مرحباً أستاذة 000،
+	
+			
+			
+	
+<hr>
+
+يرجى توضيح  رمز المسافر الذي يبدأ بحرف A؟
+أو
+<br>
+برجاء توضيح البريد الإلكتروني المستخدم في الحجز؟
+أو
+<br>
+يرجى افادتنا برقم الهاتف المسجل على الحجز؟
+
+
+    </p>
+    
+
+    <br>
+<hr>
+    <p class="card-text">
+			
+
+    Would you give me the last 4 digits of the card that was paid with?
+    <br/>
+If you agree, can you explain to me the email used for booking and the names of the passengers, the first and last name of each passenger?
+
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+<!-- END -->
+
+<button class="accordion">Assuring help & hold AR</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-header">
+    
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+
+
+
+      إن شاء الله بساعدك.
+<br><br>
+      حالاً سأقوم بمراجعة الأمر.
+<br><br>
+برجاء الانتظار معي من 2 إلى 4 دقائق لمراجعة الطلب الخاص بك.
+<br><br>
+أعتذر لك عن التأخير ولكن مازلت أقوم بمراجعة طلبك، برجاء الإنتظار معي من 2 إلى 4 دقائق.
+	
+    </p>
+    
+
+    <br>
+<hr>
+    <p class="card-text">
+			
+May God help you.
+Now I will review it.
+<br>
+Please wait 2-4 minutes for me to review your booking.
+<br>
+I apologize for the delay but I am still reviewing your request, please wait with me from 2 to 4 minutes.
+
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+<!-- END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="accordion">Verifications</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-header">
+    
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+
+"بستأذنك تزودنى بأخر 4 أرقام من البطاقه التي تم الدفع بها؟
+اذا بتوافق ممكن توضح لي البريد المستخدم في الحجز وأسماء المسافرين الإسم الأول و الأخير لكل مسافر؟"			
+			
+			
+			
+			
+	
+
+
+    </p>
+    
+
+    <br>
+<hr>
+    <p class="card-text">
+			
+
+    Would you give me the last 4 digits of the card that was paid with?
+    <br/>
+If you agree, can you explain to me the email used for booking and the names of the passengers, the first and last name of each passenger?
+
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+<!-- END -->
+
+
+
+
+
+
+
+<button class="accordion">Payment Link</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      "حالاً بيتم إرسال رابط دفع لتتم عملية السداد.
+برجاء إتمام الدفع بأسرع وقت لأن السعر متغير دائما على حسب الإمكانية المتاحة علما ً بأن صلاحية الرابط هي 10 دقائق.
+الحين سوف نعمل على طلب التعديل وفور الإنتهاء سوف نرسل لك التذكرة الإلكترونية على البريد الإلكتروني المسجل على الحجز خلال 60 دقيقه من الأن. "			
+			
+      
+      .</p>
+
+
+    <br>
+
+
+    
+    <p class="card-text">
+      A payment link will now be sent to complete the payment process.
+Please complete the payment as soon as possible because the price is always changing according to the available possibilities, bearing in mind that the validity of the link is 10 minutes.
+Then we will work on the amendment request, and upon completion, we will send you the e-ticket to the e-mail registered on the reservation within 60 minutes from now.
+      
+      
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+<button class="accordion">Baggage Allowance</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      "سعر الحقيبه وزن 15 كيلو مقابل .. ريال سعودي.
+سعر الحقيبه وزن 20 كيلو مقابل .. ريال سعودي.
+سعر الحقيبه وزن 25 كيلو مقابل .. ريال سعودي."			
+			
+			
+			
+		
+      
+      .</p>
+
+
+    <br>
+
+
+    <hr>
+    <p class="card-text">
+    
+The price of a 15-kilo bag is for a Saudi riyal.
+The price of a bag weighing 20 kg for .. Saudi riyals.
+The price of a bag weighing 25 kg for .. Saudi riyals.  
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+
+
+
+<button class="accordion">Boarding Pass For Verified Accounts</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      "
+من الواضح امامي ان حساب المسافر الخاص بك مفعًل, تفعيل حسابك يمنحك بعض المزايا و منها إجراء قص البوردنج (بطاقة الصعود) مجانا بدون رسوم المسافر."			
+			
+			
+			
+			
+			
+			
+			
+		
+      
+      </p>
+
+
+    <br>
+
+
+    <hr>
+    <p class="card-text">
+      It is clear to me that your passenger account is activated, activating your account gives you some advantages, including cutting the boarding pass for free without traveler fees.
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+
+<!--Boarding Pass For Non Verified Accounts			   -->
+
+
+
+
+
+<button class="accordion">Boarding Pass For Non Verified Accounts</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-body">
+    <p class="card-text">
+  من الواضح أمامى أن الحساب الخاص بك غير مفعل, تفعيل حسابك يتيح لك بعض المزايا من ضمنها إتمام عملية قص بطاقة الصعود مجانا بدون الرسوم الخاصة بالمسافر وهى 10 ريال سعودى.			
+			
+			
+			
+			
+			
+					
+			
+			
+			
+			
+			
+		
+      
+      </p>
+
+
+    <br>
+
+
+    <hr>
+    <p class="card-text">
+      It is clear to me that your account is not activated. Activating your account gives you some advantages, including completing the process of cutting the boarding pass for free without the traveler's fee of 10 Saudi riyals.
+      </p>
+      <h>https://youtu.be/A73TyDmRpe8</h4>
+
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+
+
+
+
+
+<!--Account Verification  -->
+
+
+
+
+
+<button class="accordion">Account Verification</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-body">
+    <p class="card-text">
+      "لتفعيل حسابك هتسوى دخول على My account أو حسابى يوجد قائمة تسمى تفعيل الحساب بيتم الضغط عليها و بيتم وصول بريد إلكترونى على البريد يحتوى على رابط بيتم الضغط عليه ثم يتم  تفعيل الحساب.
+					
+<h4>https://youtu.be/A73TyDmRpe8
+</h4>	
+      
+      </p>
+
+
+    <br>
+
+
+    <hr>
+    <p class="card-text">
+
+      To activate your account, you will be logged into My Account or My Account. There is a menu called Activate Account. Click on it, and an email will be sent to the mail containing a link that will be clicked, then the account will be activated
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+
+
+
+
+<!--Hold Procedures			  -->
+
+
+
+
+
+<button class="accordion">Hold Procedures</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-body">
+    <p class="card-text">
+
+      " برجاء الإنتظار معي من 2 إلى 5 دقائق للمراجعة.
+      <br>
+
+بشكرك علي الإنتظار وبعتذر عن الإطاله."			
+			
+			
+			
+	
+      
+      </p>
+
+
+    <br>
+
+
+    <hr>
+    <p class="card-text">
+Please wait 2-5 minutes for my review.
+<br>
+
+Thank you for waiting, and apologies for the long wait."
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<!--Refund Time Frame						  -->
+
+
+
+
+
+<button class="accordion">Refund Time Frame	</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-body">
+    <p class="card-text">
+يرجى العلم أن فور تأكيد طلب الإلغاء، سيتم رد المبلغ فى خلال  من ..... عمل.			
+			
+			
+	
+      
+      </p>
+
+
+    <br>
+
+
+    <hr>
+    <p class="card-text">
+Please note that as soon as the cancellation request is confirmed, the amount will be refunded within ______ business.
+
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+<!-- New Booking Request			 -->
+
+<button class="accordion">New Booking Request				</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-body">
+    <p class="card-text">
+      
+يمكنك الحجز من خلال الموقع عبر الرابط: https://www.almosafer.com/ar/flights-home 
+
+او تطبيق المسافر.
+<br><br>
+أو التواصل مع قسم المبيعات على رقم: 92000997. 
+وهناك إمكانية تحويل المحادثة لقسم المبيعات مع العلم أن الحجز من خلالهم يضاف إليه من 1% إلى 5% من قيمة الحجز كرسوم خدمة.
+
+<hr>
+
+Links AR
+
+ويمكنك معرفة جميع مستجدات السفر حول الوجهات الدولية من خلال الرابط التالى: 
+
+	 https://www.almosafer.com/ar/page/travel-updates/countries
+      
+      </p>
+
+
+    <br>
+
+
+    <hr>
+    <p class="card-text">
+
+      
+There are two ways to make a new reservation
+The first is through the website or application, and this is through you, and I can help you verify the available capabilities only.
+The second is through sales, through which inquiries and reservations are also made, but the sales department sometimes differs from 1% to 5% from the site or application.
+Which way do you prefer, and I will help you, God willing?
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+
+
+
+<!-- Transfer To Another Queue						 -->
+
+<button class="accordion">Transfer To Another Queue					</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-body">
+    <p class="card-text">
+      "سيتم تحويل المحادثة الآن وإن شاء الله بيتم مساعدتك.
+"			
+			
+      
+      </p>
+
+
+    <br>
+
+
+    <hr>
+    <p class="card-text">
+
+The conversation will now be transferred, and God willing, you will be able to help.
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Galileo Bookings 					 -->
+
+<button class="accordion">Transfer To Another Queue					</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-body">
+    <p class="card-text">
+      "سيتم تحويل المحادثة الآن وإن شاء الله بيتم مساعدتك.
+"			
+			
+      
+      </p>
+
+
+    <br>
+
+
+    <hr>
+    <p class="card-text">
+
+The conversation will now be transferred, and God willing, you will be able to help.
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+
+
+<!-- Galileo Bookings 			 					 -->
+
+<button class="accordion">Galileo Bookings 								</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-body">
+    <p class="card-text">
+      لقد تم تقديم الطلب الان وسنتواصل معك فى خلال من نصف ساعة إلى ساعتين.			
+			
+			
+			
+      </p>
+
+
+    <br>
+
+
+    <hr>
+    <p class="card-text">
+The request has been submitted now and we will contact you within half an hour to two hours.
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+
+
+
+<!-- Ending					 					 -->
+
+<button class="accordion">Ending			 								</button>
+<div class="panel" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-6">
+<div class="card text-center">
+  
+  <div class="card-body">
+    <p class="card-text">
+هل لديكم أي إستفسارات أخرى؟
+أو
+هل يمكننى مساعدتك في أي إستفسارات أخرى؟
+<br><br>
+نتمنى لك رحلة سعيدة.
+أو
+نتمنى لك دوام الصحة والعافية.
+<br>
+
+
+تشرفت بالتواصل معك.
+شكراً لتواصلك مع المسافر في أمان الله.
+
+			
+			
+			
+			
+			
+			
+			
+      </p>
+
+
+    <br>
+
+
+    <hr>
+
+
+
+    <p class="card-text">
+
+
+Do you have any other inquiries?
+or
+Can I help you with any other inquiries?
+<br><br>
+We wish you a pleasant trip.
+or
+We wish you continued health and wellness.
+<br><br>
+
+Nice to communicate with you.
+Thank you for contacting the traveler in the safety of God.
+
+      </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+</script>
+</body>
+</html>

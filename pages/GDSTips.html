@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>GDS TIPS</title>
+
+<style>
+    #myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #F6EABE; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  border-radius: 10px;
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin-left: 100px;
+  align-items: center;
+}
+
+#myUL li a {
+  border: 1px solid #87AAAA; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #020308;; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 19px; /* Increase the font-size */
+  border-radius: 30px;
+  color: whitesmoke; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the 
+  whole list */
+  font-family:monospace;
+
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: rgb(173, 12, 12); /* Add a hover effect to all links, except for headers */
+
+}
+
+</style>
+
+</head>
+
+
+
+
+
+
+
+
+<body style="background-color: #235f5f;background-attachment: fixed;background-repeat: no-repeat;background-size: cover; object-fit: cover; width: 90vw; height: 90vh; opacity: .9;" >
+
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Topic..">
+
+<ul id="myUL">
+  <li><a href="../pages/GDSTIPS/FQP-FQD-FRN.html"> FQP - FQD - FRN</a></li>
+  <br/>
+  <li><a href="../pages/GDSTIPS/Copying-PNR.html">Copying-PNR</a></li>
+<br/>
+  <li><a href="../pages/GDSTIPS/Displaying-ET-Records.html">Display-ET-Records</a></li>
+  <br/>
+  <li><a href="../pages/GDSTIPS/Ghost-Segment.html">Ghost-Segmant</a></li>
+<br/>
+  <li><a href="../pages/GDSTIPS/PNR-HISTORY.html">PNR-HISTORY</a></li>
+  <br/>
+  <li><a href="../pages/GDSTIPS/PNR-Segment-Status-Code.html">PNR-Segment-Status-Code</a></li>
+  <br/>
+  <li><a href="../pages/GDSTIPS/Pricing.html">Pricing</a></li>
+  <br/>
+  <li><a href="../pages/GDSTIPS/Recall-the-Purged-PNR.html">Recall-the-Purged-PNR</a></li>
+  <br/>
+  <li><a href="../pages/GDSTIPS/Retrieve-PNR.html">Retrieve-PNR</a></li>
+<br/>
+  <li><a href="../pages/GDSTIPS/Special-Service-Requests.html">Special-Service-Requests</a></li>
+  <br/>
+  <li><a href="../pages/GDSTIPS/Split.html">Split</a></li>
+  <br/>
+  <li><a href="../pages/GDSTIPS/Voiding-Electronic-Tickets.html">Voiding-Electronic-Tickets</a></li>
+</ul>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="../js/script1.js"></script>
+</body>
+</html>

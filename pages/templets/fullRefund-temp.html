@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>templete</title>
+
+</head>
+
+<style>
+body {
+  background-color: #16393b;
+  padding: 20px;
+  font-family: Arial;
+}
+
+td{
+        font-size: large;
+        color: khaki;
+
+    }
+    .temp-continer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+    }
+    .temp-full{
+        margin-bottom: 100px;
+        
+    }
+
+
+    
+  </style>
+
+
+
+<body>
+
+
+    <div class="temp-continer">
+        <div class="templete temp-full">
+    <h3 style="text-align: center; color: #A2416B;; font-size: 30px;">Full Cancelation</h3>
+    
+
+
+<table style="color: rgb(2, 8, 10);" border="3"  width = "600px" height = "450px"  >
+<tr>
+<td> <br><br>  <input style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; height: 50px;" type="text" name="number" id="num_hub" placeholder="HUB-AMOUNT"></td>
+</tr>
+<tr>
+<td> <br><br>  <input style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; height: 50px;" type="text" name="number" id="num_gds" placeholder="penality =>(twd)=> (fxx/r,doi) => (fqn1*pe)"></td>
+</tr>
+<tr>
+<td> <br><br>  <input style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; height: 50px;" type="text" name="number" id="num_service" placeholder="Service HUB"></td>
+</tr>
+<tr>
+<td> <br><br>  <input style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; height: 50px;" type="text" name="number" id="num_tax" placeholder="TAX (twd/tax)"></td>
+</tr>
+<tr>
+<td> <br><br>  <input style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; height: 50px;" type="text" name="number" id="num_mosafer" placeholder="mosafer fees (30sar - 6kwd ) "></td>
+</tr>
+
+<tr>
+    <br><br><br>
+   
+<td  style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; height: 30px;"> 
+    <br><br><br>
+    <div style="color: aqua;" name="deduct" id="deduct" aria-placeholder="Amount deducted"> Amount deducted <br><br><br><br></div>
+
+</tr>
+<tr>
+<br><br><br>
+<td  style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; height: 30px;"> 
+    <h3 id="tottal" style="text-align: center; color: aqua; font-size: 30px;">Refund Amount</h3>
+ </td>
+ 
+ 
+</tr>
+
+</table>
+<br><br>
+ <button   id="myfull" style="color: rgb(11, 248, 248); font-size: 20px; background-color: black; width: 600px; border-radius: 20px; height: 70px;" >get Amount</button> 
+</script>
+
+
+        </div>
+     
+
+<script>
+// full refund templete 
+
+  function clulc() {
+
+const num_hub = document.getElementById("num_hub").value;
+const num_gds = document.getElementById("num_gds").value;
+const num_service = document.getElementById("num_service").value;
+const num_tax = document.getElementById("num_tax").value;
+const num_mosafer = document.getElementById("num_mosafer").value;
+ 
+
+const deduct = document.getElementById("deduct");  
+const tottal = document.getElementById("tottal");
+
+const mydeduct = parseInt(num_gds)  + parseInt( num_service) +  parseInt( num_tax) + parseInt( num_mosafer)
+let mytottal = `${num_hub}` - `${parseInt( mydeduct)}` ;
+if(num_hub < mydeduct){return alert( "tiket is non refundable  ")} 
+ deduct.innerHTML = ` 
+Airline cancellation fee:  ${num_gds} SAR per passenger.
+<br/>
+Almosafer Cancellation Fee:  ${num_mosafer} SAR per passenger.
+<br/>
+Non-refundable service fee:${num_service} SAR.
+<br/>
+Non-refundable airline taxes:  ${num_tax} SAR per passenger.
+<br/>
+Total amount deducted: ${mydeduct} SAR.
+<br/>
+Total Refund:  ${mytottal}    SAR
+ `;
+ tottal.innerHTML = `Refundable Amount  <br><br>   ${mytottal}     
+ 
+ <br/>
+   <li style="text-align: center; color: aqua; font-size: 30px;" >
+        <a href="./fullrefund.html" style="text-align: center; color: rgb(26, 247, 74); font-size: 30px;">Next</a></li>
+
+ `
+  
+
+ ; 
+
+
+}
+
+document.getElementById("myfull").addEventListener("click" , clulc); 
+
+
+</script>
+    <!-- Optional JavaScript; choose one of the two! -->    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>

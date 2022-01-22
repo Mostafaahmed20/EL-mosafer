@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Add icon library -->
+<link rel="stylesheet" href="../../css/my-team-style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>templets</title>
+
+ 
+</head>
+<style>
+.column{
+    margin: 100px auto;
+    float: left;
+    width: 20.33%;
+}
+.content{
+    margin: 25px auto ;
+}
+#continer , #continer2 , #continer3 , #continer4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#myBtnContainer{
+    margin-bottom: 20px ; 
+}
+</style>
+<body>
+
+  
+   
+<label class="switch">
+  <input type="checkbox" id="button">
+  <span class="slider round"></span>
+</label>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>Almosafer Loyalty Programs</h1>
+<hr>
+<div id="snow">
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('AlFURSAN')">AlFURSAN</button>
+  <button class="btn" onclick="filterSelection('Qitaf')"> Qitaf</button>
+  <button class="btn" onclick="filterSelection('Wallet')">Wallet</button>
+  <button class="btn" onclick="filterSelection('Verification Steps')">Verification Steps</button>
+  
+</div>
+
+<!-- mangement start -->
+
+
+<!-- third -->
+<div id="continer">
+<div class="column AlFURSAN">
+    <div class="content">
+      <p>AlFURSAN</p>
+    <img src="../../img/err.jfif" alt="Lights" style="width:100%">
+    <div id="charging" class="fa"></div>
+  
+  <p class="title">
+      <a href="../loyality/forsan.html">FURSAN</a>
+  </p>
+
+    </div>
+     
+
+
+
+    
+</div>
+  
+
+<!-- third -->
+
+  <div class="column Qitaf">
+    <div class="content">
+      <p>Qitaf</p>
+    <img src="../../img/err.jfif" alt="Lights" style="width:100%">
+    <div id="charging" class="fa"></div>
+  
+  <p class="title">
+      <a href="../loyality/Qitaf.html">Qitaf</a>
+  </p>
+
+    </div>
+     
+
+
+
+    
+</div>
+
+<!-- forth -->
+
+  <div class="column Wallet">
+     <div class="content">
+    <p>Wallet</p>
+ 
+      <img src="../../img/err.jfif" alt="Lights" style="width:100%">
+     
+<!-- <p>script</p> -->
+<p class="title">
+      <a href="../loyality/wallet.html">Wallet</a>
+  </p>
+
+</div>
+     
+
+</div>
+
+</div>
+  
+
+
+
+
+
+
+
+
+  <div class="column Verification Steps">
+     <div class="content">
+    <p>Verification Steps</p>
+ 
+      <img src="../../img/err.jfif" alt="Lights" style="width:100%">
+     
+<!-- <p>script</p> -->
+<p class="title">
+      <a href="../loyality/v">Verification</a>
+  </p>
+
+</div>
+     
+
+</div>
+
+</div>
+  
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+  
+ 
+
+
+
+
+
+
+
+
+
+<script>
+  
+
+
+
+
+
+
+
+
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+<script src="../../js/my-teamjs.js"></script>
+<script src="../js/particles.min.js"></script>
+    <script src="../../js/app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="../js/script1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>shift, swap!</title>
+  </head>
+  <body>
+    <h1>Shift-Swap</h1>
+<table class="table" border="3" >
+  <thead>
+    <tr>
+      <th scope="col">number</th>
+      <th scope="col">SF ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Team-Leader</th>
+      <th scope="col">LOB</th>
+      <th scope="col">swap-Date</th>
+      <th scope="col">Shift-before</th>
+      <th scope="col">Shift-After</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><input type="text" name="sf-id" id="sf_id" placeholder="staff Id"></td>
+      <td><input type="text" name="name" id="name" placeholder="name"></td>
+      <td><input type="text" name="team-leader" id="team-leader" placeholder="team-leader"></td>
+      <td><input type="text" name="LOB" id="sf_id" placeholder="LOB"></td>
+      <td><input type="date" name="swap-Date" id="swap-Date" placeholder="swap-Date"></td>
+      <td><input type="text" name="Shift-before" id="Shift-before" placeholder="Shift-before"></td>
+      <td><input type="text" name="Shift-After" id="Shift-After" placeholder="Shift-After"></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><input type="text" name="sf-id" id="sf_id2" placeholder="staff Id"></td>
+      <td><input type="text" name="name" id="name2" placeholder="name"></td>
+      <td><input type="text" name="team-leader" id="team-leader2" placeholder="team-leader"></td>
+      <td><input type="text" name="LOB" id="sf_id2" placeholder="LOB"></td>
+      <td><input type="date" name="swap-Date" id="swap-Date2" placeholder="swap-Date"></td>
+      <td><input type="text" name="Shift-before" id="Shift-before2" placeholder="Shift-before"></td>
+      <td><input type="text" name="Shift-After" id="Shift-After2" placeholder="Shift-After"></td>
+      
+    </tr>
+  </tbody>
+ 
+</table>
+ <button type="button" class="btn btn-secondary btn-lg" id="btn" >
+  <a href="mailto:cc.rtm.eg@seera.sa">Send To Rtm</a>   
+        
+     </button>
+<div id="msg"></div>
+<script>
+
+const button = document.getElementById("btn")
+
+function controlSwap(){
+const stafid1 = document.getElementById("sf_id").value;
+const name = document.getElementById("name").value;
+const lob = document.getElementById("lob").value;
+const swap_date = document.getElementById("swap_Date").value;
+const shift_before = document.getElementById("Shift_before").value;
+const shift_after = document.getElementById("shift_after").value;
+const masssage = document.getElementById("msg");
+
+   
+    
+
+
+}
+
+
+
+button.addEventListener("click" , controlSwap)
+
+
+
+
+
+
+const stafid2 = document.getElementById("sf_id2");
+const name2 = document.getElementById("name2")
+const lob2 = document.getElementById("lob2")
+const swap_date2 = document.getElementById("swap_Date2")
+const shift_before2 = document.getElementById("Shift_before2")
+const shift_after2 = document.getElementById("shift_after2")
+
+
+
+</script>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>

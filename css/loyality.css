@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(124, 210, 238 , .8);
+}
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+/* Style table headers and table data */
+th, td {
+  text-align: center;
+  color: aqua;
+  padding: 16px;
+  opacity: .8;
+  font-style: italic;
+  font-weight: bold;
+  
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+/* Zebra-striped table rows */
+tr:nth-child(even) {
+  background-color: #0e0c0c;
+  opacity: .9;
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-remove {
+  color: red;
+}
+h3 {
+  font-size: 25px;
+  word-break: break-all;
+  color: blue;
+}

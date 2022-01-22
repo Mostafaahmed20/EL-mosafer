@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Add icon library -->
+<!-- <link rel="stylesheet" href="../../css/my-team-style.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+
+ 
+</head>
+
+<body>
+<style>
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;font-size: 25px;color: royalblue;}
+
+/* Add a blue color to the author */
+.author {color: goldenrod;font-size: 20px;} 
+
+</style>
+ 
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides">
+    <q>To find the tax information for a specific country, enter: FQNTAX/xx (xx = country code).</q>
+    <p class="author">FQNTAX/SA</p>
+  </div>
+
+  <div class="mySlides">
+    <q>We have an update regarding their non-refundable tax <br> 
+        <br><br>
+    therefore, we will not refund ( in case of cancellation ) & we will collect them ( in case of reissue ) 
+<br><br>
+The updated Non-refundable taxes are:   XL & Q7
+    
+    </q>
+    <p class="author">- Egypt Air </p>
+  </div>
+
+  <div class="mySlides">
+    <q>
+        1- "YR"  Tax is refundable in all Unutilized tickets whether the action is voluntary or involuntary.
+
+<br><br>
+
+2- " YR" is Non-refundable when in the partial refund requests.
+        
+<hr>
+
+for instance:  
+
+
+
+If the CST did not use any segments of the journey and asks for the refund, we will refund him the YR, and if he used the outbound and asks to refund the 
+<br><br>
+return, we will not refund him the YR, Noting that tax is being charged Automatically and some times being included in the One Way Fare, so please check that carefully not to charge it twice.
+
+        </q>
+    <p class="author">- Emirates Air </p>
+  </div>
+
+
+
+  <div class="mySlides">
+    <q>
+        
+It's a must to collect 50 SAR per Passenger  even Infant we will collect fees related to this office id Only
+
+
+
+<br><br>
+
+This is in addition to Mosafer fees and other fees like pen and tax
+
+        </q>
+    <p class="author">- RUHNP0101 office </p>
+  </div>
+
+
+
+
+
+  <div class="mySlides">
+    <q>
+        
+F7 Tax is non refundable for cancellation
+
+
+        </q>
+    <p class="author">-  Nile Air </p>
+  </div>
+
+
+
+  <div class="mySlides">
+    <q>
+        
+It's is a must to collect both penalties in both scenarios amend or refund.
+
+        </q>
+    <p class="author">-  Turkish airlines No show </p>
+  </div>
+
+
+
+
+
+  <div class="mySlides">
+    <q>
+        All tickets are non-refundable
+
+        </q>
+    <p class="author">-  RayanAir </p>
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div> 
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+
+</script>
+
+</body>
+
+</html>
