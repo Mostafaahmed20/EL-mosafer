@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Contacts</title>
+ 
+</head>
+<style>
+    body{
+        box-sizing: content-box;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 90vh;
+    }
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+ 
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+
+}
+td{
+    font-family: Arial, Helvetica, sans-serif;
+    color: cadetblue;
+    font-weight: 500;
+    width: 50%;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(22, 51, 41);
+    font-size: 19px;
+}
+</style>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Airline code</th>
+    <th style="width:40%;">Numbers</th>
+  </tr>
+  <tr>
+    
+    <td>SV</td>
+    
+    <td>920022222-0540000002( <a href="#">Boarding</a>)</td>
+
+  </tr>
+  <tr>
+    
+    <td>XY</td>
+    
+    <td>920001234  Watsapp+966592001234( <a href="#">Boarding</a>)</td>
+
+  </tr>
+  <tr>
+    
+    <td>SV</td>
+    
+    <td>920022222-0540000002( <a href="#">Boarding</a>)</td>
+
+  </tr>
+  <tr>
+    
+    <td>EY</td>
+    
+    <td>+971 600 555666( <a href="#">Boarding</a>)</td>
+
+  </tr>
+<tr>
+    
+    <td>PR</td>
+    
+    <td>+966114653995 - +966138829116   - +966138824993( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+
+
+
+
+
+<tr>
+    
+    <td>KU</td>
+    
+    <td>+96524345555 - +96524735247 - +96612331318 - +9661 2331189( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+
+
+  <tr>
+    
+    <td>WY</td>
+    
+    <td>+96824765122 - +968-24531111 - +97316198058( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+<tr>
+    
+    <td>SV</td>
+    
+    <td>920022222-0540000002( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+
+
+
+
+
+  <tr>
+    
+    <td>EK</td>
+    
+    <td>+971600555555 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+
+
+
+
+
+
+  <tr>
+    
+    <td>TK</td>
+    
+    <td>+908503330849 - +966125598087( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+
+
+
+
+<tr>
+    
+    <td>GA</td>
+    
+    <td>08041807807 - +622123519999( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+
+
+<tr>
+    
+    <td>ME</td>
+    
+    <td>+96614614671 - +9611629999( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+
+
+  <tr>
+    
+    <td>LH</td>
+    
+    <td>+966138837449 / 8008447661( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+<tr>
+    
+    <td>PC</td>
+    
+    <td>0097126770678  00966581449449( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+
+
+
+
+  <tr>
+    
+    <td>MH</td>
+    
+    <td>+201401040794( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  <tr>
+    
+    <td>J9</td>
+    
+    <td>+96522054944 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+  <tr>
+    
+    <td>NP</td>
+    
+    <td>+966126287663 - +20226968000 - 319415( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+  <tr>
+    
+    <td>RJ</td>
+    
+    <td>96265100000 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  <tr>
+    
+    <td>6E</td>
+    
+    <td> 920022022( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  <tr>
+    
+    <td>FZ</td>
+    
+    <td>+971600544445 - + 966920015566( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  <tr>
+    
+    <td>SU</td>
+    
+    <td>+74952235555 +74953803585( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+    <tr>
+    
+    <td>PS</td>
+    
+    <td>+380445815050 +380443645050( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+    <tr>
+    
+    <td>MS</td>
+    
+    <td>+97144358444 - +97126344777 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+    <tr>
+    
+    <td>QR</td>
+    
+    <td>96522901777 - 97440230000( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+    <tr>
+    
+    <td>A3</td>
+    
+    <td>+9668008441206( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+    <tr>
+    
+    <td>UA</td>
+    
+    <td>+966920002185 +96522958900( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+    <tr>
+    
+    <td>6E</td>
+    
+    <td>+9101244352500 - +911246173838 - +97143557355( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+    <tr>
+    
+    <td>R5</td>
+    
+    <td>+96265501760 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+    <tr>
+    
+    <td>OV</td>
+    
+    <td>+96824272222 - +971 42255777 - +971 4 8877111 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+    <tr>
+    
+    <td>SQ</td>
+    
+    <td>+966126919484 - 8002440015 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+    <tr>
+    
+    <td>CZ </td>
+    
+    <td>+97142945666 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+    <tr>
+    
+    <td>UL</td>
+    
+    <td> +94117771979 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+    <tr>
+    
+    <td>J2</td>
+    
+    <td>994125988880( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+    <tr>
+    
+    <td>F3</td>
+    
+    <td> 920000212 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+    <tr>
+    
+    <td>N4</td>
+    
+    <td>+74957305080 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+    <tr>
+    
+    <td>AZ</td>
+    
+    <td> +090071111 +9668002444774 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+    <tr>
+    
+    <td>KL</td>
+    
+    <td>+18002372747 - +97146025420 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+    <tr>
+    
+    <td>VY</td>
+    
+    <td>4402035143971 - 0900000340 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+    <tr>
+    
+    <td>TM</td>
+    
+    <td>+448000260728 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+  
+    <tr>
+    
+    <td>ET</td>
+    
+    <td>+251116179900 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>JU</td>
+    
+    <td>18883909847 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>KQ</td>
+    
+    <td>44965171 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>KE</td>
+    
+    <td>18004385000( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>AI</td>
+    
+    <td>18886341407 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>BA</td>
+    
+    <td>920002215 - 18002436822 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>AF</td>
+    
+    <td>18002372747 - +97146025420 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>LX</td>
+    
+    <td>+97143898100 - +97143898100 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+    <tr>
+    
+    <td>DL</td>
+    
+    <td>8002211212 - 8008470578 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>OS</td>
+    
+    <td>43517663100 - 431701481000 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+    <tr>
+    
+    <td>IX</td>
+    
+    <td> +966 11477 2228 -  +971 4207 9444 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>E5 </td>
+    
+    <td>+448000260728 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>CX</td>
+    
+    <td>63322308888 - 632702088810  - 971 45086777 - 971 43545777 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+  
+  
+    <tr>
+    
+    <td>SG</td>
+    
+    <td>+919 8718 03333 - +971 43965186 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+    <tr>
+    
+    <td>AT</td>
+    
+    <td>+212522489797( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+    <tr>
+    
+    <td>AA</td>
+    
+    <td>8004337300 - 60320535120 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+    <tr>
+    
+    <td>AC</td>
+    
+    <td>966920002185 - 8008441952 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+    <tr>
+    
+    <td>NK</td>
+    
+    <td>6620888955 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+    <tr>
+    
+    <td>SA</td>
+    
+    <td>27119781111-0861606606 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+    <tr>
+    
+    <td>HM</td>
+    
+    <td>2484391000 - 08001800 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+    <tr>
+    
+    <td>GF</td>
+    
+    <td>+966135109595 ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+    <tr>
+    
+    <td>SM</td>
+    
+    <td>(+966)122273340  (+202) 26955555   ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+    <tr>
+    
+    <td>HM</td>
+    
+    <td>15290 - +97145616832 - 002-0222-694-465  ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+    <tr>
+    
+    <td>cebu</td>
+    
+    <td>+639988407547 +63288027169   ( <a href="#">Boarding</a>)</td>
+
+  </tr>
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+   <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>
