@@ -23,7 +23,7 @@ particlesJS('snow',
         }
       },
       "color": {
-        "value": "#AA14F0"
+        "value": "black"
       },
       "shape": {
         "type": ["circle", "triangle"],
