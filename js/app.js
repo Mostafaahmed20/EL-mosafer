@@ -29,7 +29,7 @@ particlesJS('snow',
         "type": ["circle", "triangle"],
         "stroke": {
           "width": 0,
-          "color": "#FF5959"
+          "color": "#F05454"
         },
         "polygon": {
           "nb_sides": 5
