@@ -4,238 +4,79 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- <link rel="stylesheet" href="./css/main.css"> -->
+<link rel="stylesheet" href="../css/main.css">
 
 </head>
-  <style>
-    * {
-  box-sizing: border-box;
-}
-
+<body>
+<style>
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background-image: linear-gradient(to right, rgba(24, 55, 78 , .4) , rgba(10, 250, 250 , .5)), url("../img/back.png");
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #5c5656;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333; 
 }
 
 .navbar a {
   float: left;
-  font-size: 17px;
-  color: black;
-  font-weight: bolder;
-  font-family: sans-serif;
+  font-size: 16px;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-.dropdown {
+.subnav {
   float: left;
   overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.subnav .subnavbtn {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
+  color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font: inherit;
+  font-family: inherit;
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: aqua;
-  opacity: .7;
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+opacity: .5;
 }
 
-.dropdown-content {
+.subnav-content {
   display: none;
   position: absolute;
-  background-color: rgb(31, 27, 27);
-  width: 90%;
   left: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: rgb(94, 2, 2);
+  width: 100%;
   z-index: 1;
 }
 
-.dropdown-content .header {
-  background-color: black;
-  opacity: .8;
-  padding: 10px;
-  color: whitesmoke;
-  margin-top: 5px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
+.subnav-content a {
   float: left;
-  width: 33.33%;
-  padding: 10px;
-  background-color: rgb(63, 59, 59);
-  height: 250px;
-}
-
-.column a {
-  float: none;
-  color: aquamarine;
-  padding: 10px;
+  color: white;
   text-decoration: none;
-  display: block;
-  text-align: left;
 }
 
-.column a:hover {
-  background-color: rgb(107, 206, 115);
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    height: auto;
-  }
-}
-
-
-
-
-
-
-.accordion {
+.subnav-content a:hover {
   background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-  margin-left: 50px;
-  margin-bottom: 10px;
-  font-size: 20px;
+  color: black;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: #ccc;
+.subnav:hover .subnav-content {
+  display: block;
 }
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-  
-}
-p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-h4{
-    color: cadetblue;
-    font-style: italic;
-}
-
-table, td, th {
-  border: 1px solid black;
-  
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  
-}
-
-td {
-  height: 50px;
-  vertical-align: bottom;
-}
-
-.row{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: flex-start;
-}
-table{
-  margin-left: 200px;
-
-}
-    #myInput {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #F6EABE; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-
-#myUL {
-  /* Remove default list styling */
-  list-style-type: none;
-  padding: 0;
-  margin-left: 100px;
-  align-items: center;
-}
-
-#myUL li a {
-  border: 1px solid #87AAAA; /* Add a border to all links */
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #020308;; /* Grey background color */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove default text underline */
-  font-size: 19px; /* Increase the font-size */
-  border-radius: 30px;
-  color: whitesmoke; /* Add a black text color */
-  display: block; /* Make it into a block element to fill the 
-  whole list */
-  font-family: Arial, Helvetica, sans-serif;
-
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: rgb(173, 12, 12); /* Add a hover effect to all links, except for headers */
-}
-
-    
-  </style>
-  
-  
-<body>
-
-
-
+</style>
 </head>
 <div id="snow">
 <body>
-
-
-
-
 
 <div class="navbar">
   <a href="../index.html">Home</a>
@@ -246,10 +87,10 @@ table{
       <a href="../pages/templets/AirlineContacts.html">Airline Contacts</a>
       <a href="../pages/LCC.html">LCC</a>
       <a href="../pages/pot.html">ASK</a>
-      <a href="../pages/loyality/Loyalty.html">Loyalty</a>
-        <a href="../pages/feesandtax.html">Fees & Taxes</a>
+      <a href="../pages/Loyalty.html">Loyalty</a>
+        <a href="../pages/GDSTips.html">Fees & Taxes</a>
         <a href="../pages/RefundSLA.html">Refund Time Frame</a>
-      <a href="./loyality/Nonrefundable.html">Non-Refundable TAX</a>
+      <a href="https://www.almosafer.com/ar/about-us">Non-Refundable TAX</a>
       <a href="https://www.almosafer.com/ar/about-us">Our Branch</a>
       <a href="https://www.almosafer.com/ar/page/travel-updates/countries">travel restrictions</a>
 
@@ -273,6 +114,7 @@ table{
   <div class="subnav">
     <button class="subnavbtn">Contacts & sheeets <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
+      <a href="#link1"> Queue Extension</a>
       <a href="#link2">contact-us</a>
       <a href="https://docs.google.com/spreadsheets/d/1jckEIadXGtej2kl6izua-bcm0DaKIau_hK-7BWYMj_Q/edit#gid=0">travel Fusion Refunds</a>
       <a href="https://docs.google.com/spreadsheets/d/1X15yDe2IbCnFOB2zPnc_P6rx9KLQHP7Auo57bPiYpyU/edit?ts=5f74dcb4#gid=0">Marry Sheet</a>
@@ -280,31 +122,22 @@ table{
       <a href="https://www.google.com/url?q=https%3A%2F%2Fhub.almosafer.com&sa=D&sntz=1&usg=AFQjCNECpFL5uRd3mOV0COIGu2Y7iyjvug">HUB </a>
       <a href="https://www.google.com/url?q=https%3A%2F%2Faltayyargroup.lightning.force.com&sa=D&sntz=1&usg=AFQjCNFNTb76juUIn4dmqopkrRQkpQPByQ">SALESFORECE</a>
       <a href="https://www.google.com/url?q=https%3A%2F%2Fcc-connect.call-center.altayyargroup.com%2F%23%2Flogoff%3Freason%3DserverInitiated%26message%3DYour%2520session%2520has%2520been%2520logged%2520out%2520due%2520to%2520a%2520logon%2520at%2520another%2520location%2520or%2520because%2520your%2520administrator%2520revoked%2520a%2520necessary%2520license.&sa=D&sntz=1&usg=AFQjCNEdL0L8DPovPUd5sZKc8X9t1kt66g">INTERACTION</a>
+
+
+      <a href="http://www.google.com/url?q=http%3A%2F%2F10.55.5.30%2Fiwp%2Fmarquee%2Fv%2Fflights%2F&sa=D&sntz=1&usg=AFQjCNE2FYXGRlShwFboMvWAds6LO8ysWQ">DASHBOARD</a>
+      
     </div>
   </div>
   <a href="https://www.almosafer.com/en/contact-us">Contact US</a>
 </div>
 </div>
-
 <!-- 
 <div style="padding:0 16px">
   <h3>Subnav/dropdown menu inside a Navigation Bar</h3>
   <p>Hover over the "about", "services" or "partners" link to see the sub navigation menu.</p>
 </div> -->
-
-
-
-
-
-
-<h4 id="demo"></h4>
-
 <script src="../js/particles.min.js"></script>
 <script src="../js/app.js"></script>
-<script src="../js/time.js">
-
-
-</script>
 </body>
 
 </html>
